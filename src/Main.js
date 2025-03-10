@@ -10,6 +10,13 @@ function Main() {
         </div>
 
         <button className="btn">Nachricht???</button>
+
+        <a href="/" target="_blank" className="icon instagram"></a>
+        <a href="/" target="_blank" className="icon email"></a>
+
+        <div className="switch">
+            <div className="theme light"></div>
+        </div>
       </header>
     </div>
   );

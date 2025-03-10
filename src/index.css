@@ -63,7 +63,6 @@ header a:hover {
 
 .btn:before {
   content: "";
-
   position: absolute;
   height: 300px;
   width: 30px;
@@ -75,4 +74,56 @@ header a:hover {
 
 .btn:hover:before {
   transform: rotate(-20deg) translateX(200px);
+}
+
+.icon {
+  height: 55px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-right: 2%;
+}
+
+.icon.instagram {
+  content: url(/public/icons/insta.svg);
+}
+
+.icon.email {
+  content: url(/public/icons/email.svg);
+}
+
+.switch {
+  width: 135px;
+  height: 55px;
+  border-radius: 55px;
+  background-color: #eeebff;
+  overflow: hidden;
+}
+
+.theme {
+  margin: 2px;
+  width: 51px;
+  height: 51px;
+  border-radius: 55px;
+  background-color: white;
+  transition: 0.5s ease-in-out;
+  position: relative;
+}
+
+.theme.light::after {
+  /* content: url(../public/icons/sun.png); */
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-color: black;
+  position: absolute;
+  border-radius: 100%;
+  left: 50%;
+  top: 50%;
+  margin-top: -7.5px;
+  margin-left: -7.5px;
+}
+
+.switch:hover > .theme.light {
+  transform: rotate(45deg);
 }
