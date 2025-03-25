@@ -28,7 +28,7 @@ function Main() {
         <ModalWindow show={showModal} onClose={handleCloseModal}>
           <h2 style={{ color: "#4824ff", fontSize: "40px" }}>Kontakt</h2>
           <p style={{ fontSize: "22px" }}>
-            Sie können uns per Telefon <br /> oder per E-Mail kontaktieren
+            Sie können uns per Telefon <br /> oder per E-Mail kontaktieren:
           </p>
         </ModalWindow>
 
