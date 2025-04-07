@@ -83,16 +83,18 @@
 
 .social.telefon {
     content: url(../public/icons/telefon.svg);
-    height: 55px;
+    height: 50px;
     scale: 0.6;
-    margin-left: -2%;
+    margin-left: 2%;
+    filter: brightness(0) invert(1);
 }
 
 .social.email {
     content: url(../public/icons/email.svg);
-    height: 60px;
+    height: 55px;
     scale: 0.6;
-    margin-left: -2%;
+    margin-left: 2%;
+    filter: brightness(0) invert(1);
 }
 
 .social-button:hover {

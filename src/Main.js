@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Children, useState } from "react";
 import ModalWindow from "./ModalWindow";
 
 function Main() {
@@ -32,8 +32,8 @@ function Main() {
           </p>
         </ModalWindow>
 
-        <a href="/" target="_blank" className="icon instagram"></a>
-        <a href="/" target="_blank" className="icon email"></a>
+        <a href="/" target="_blank" className="icon instagram" ></a>
+        <a href="/" target="_blank" className="icon email" ></a>
 
         <div className="switch">
           <div className="theme light"></div>

@@ -44,10 +44,15 @@ const ModalWindow = ({ show, onClose, children }) => {
         ></button>
         {children}
         <div style={{ display: "flex" }}>
-          <a href="/" target="_blank" className="social-button"></a>
-          <a className="social telefon">Telefon</a>
-          <a href="/" target="_blank" className="social-button"></a>
-          <a className="social email">E-Mail</a>
+          <a href="/" target="_blank" className="social-button">
+            <a className="social telefon" />
+            Telefon
+          </a>
+
+          <a href="/" target="_blank" className="social-button">
+            <a className="social email" />
+            E-Mail
+          </a>
         </div>
       </div>
     </div>
