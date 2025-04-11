@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useEffect } from "react";
-import "./ModalWindow.css";
+import "./ModalWindow.scss";
 
 const ModalWindow = ({ show, onClose, children }) => {
   const [isVisible, setIsVisible] = useState(false);
