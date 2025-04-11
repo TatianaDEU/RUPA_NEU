@@ -33,7 +33,7 @@ function Main() {
         </ModalWindow>
 
         <a href="/" target="_blank" className="icon instagram"></a>
-        <a href="/" target="_blank" className="icon email" ></a>
+        <a href="/" target="_blank" className="icon email"></a>
 
         <div className="switch">
           <div className="theme light"></div>
@@ -41,16 +41,20 @@ function Main() {
       </header>
 
       <div className="welcome-block">
-       <div className="first-block">
-          <h1><span className="title">RUPA</span> Bauprojekt 
-
+        <div className="first-block">
+          <h1>
+            <span className="title">RUPA</span> Bauprojekt
           </h1>
-          <h2 style={{marginBottom: "7%", marginTop: "7%"}}>
-          Ihr zuverlässiger Partner für <span style={{color: "#a31b0f"}}>hochwertige Bauprojekte.</span>
+          <h2 style={{ marginBottom: "7%", marginTop: "7%" }}>
+            Ihr zuverlässiger Partner für{" "}
+            <span style={{ color: "#a31b0f" }}>hochwertige Bauprojekte.</span>
           </h2>
-          <h3>In unserer Arbeit legen wir Wert auf nachhaltige und langlebige Arbeit.</h3>
-       </div>
-
+          <h3>
+            In unserer Arbeit legen wir Wert auf{" "}
+            <span style={{ color: "#a31b0f" }}>nachhaltige</span> und{" "}
+            <span style={{ color: "#a31b0f" }}>langlebige</span> Arbeit.
+          </h3>
+        </div>
       </div>
     </div>
   );

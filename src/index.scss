@@ -57,22 +57,8 @@ header a:hover {
 }
 
 .btn:hover {
-  filter: drop-shadow(0px 0px 35px #8f160140);
-}
-
-.btn:before {
-  content: "";
-  position: absolute;
-  height: 300px;
-  width: 30px;
-  background: #ffffffbd;
-  filter: blur(2px);
-  transition: 0.8s;
-  transform: rotate(-20deg) translateX(-50px) translateY(-200px);
-}
-
-.btn:hover:before {
-  transform: rotate(-20deg) translateX(200px);
+  filter: drop-shadow(0px 0px 20px #8f160140);
+  transform: scale(1.01);
 }
 
 .icon {
@@ -125,4 +111,40 @@ header a:hover {
 
 .switch:hover > .theme.light {
   transform: rotate(45deg);
+}
+
+/* --- Welcome block --- */
+
+.welcome-block {
+  background-color: white;
+  height: 650px;
+  display: flex;
+  place-items: center;
+  h1 {
+    font-size: 52px;
+  }
+  h2 {
+    font-size: 42px;
+    font-weight: 450;
+  }
+  h3 {
+    font-size: 30px;
+    font-weight: 300;
+  }
+  .title {
+    background: linear-gradient(to right, #a31b0f, #a31b0f, #e26c0b, #eeebff, #b65404, #a31b0f, #a31b0f);
+    background-clip: text;
+    color: transparent;
+    background-size: 200%;
+    animation: gradientAnimation 4s linear infinite;
+  }
+  @keyframes gradientAnimation {
+    0% {background-position: 200% 50%;}
+    100% {background-position: 0% 50%;}
+  }
+
+  .first-block {
+    align-content: center;
+    width: 55%;
+  }
 }
