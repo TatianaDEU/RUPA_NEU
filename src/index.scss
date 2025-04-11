@@ -63,18 +63,17 @@ header a:hover {
 
 .icon {
   height: 55px;
-  border-radius: 50%;
   cursor: pointer;
   transition: 0.3s;
   margin-right: 2%;
 }
 
 .icon.instagram {
-  
+  content: url(./assets/icons/insta.svg);
 }
 
 .icon.email {
-  
+  content: url(./assets/icons/email.svg);
 }
 
 .switch {
@@ -146,5 +145,36 @@ header a:hover {
   .first-block {
     align-content: center;
     width: 55%;
+  }
+}
+
+/* --- Service Block --- */
+
+.service-block {
+  height: 500px;
+  margin-left: -5vw;
+  margin-right: -5vw;
+  padding: 0 5vw;
+  background: #fbfaff;
+  align-content: center;
+  .tag {
+    display: flex;
+    font-size: 22px;
+    font-weight: 500;
+    background: #fbedec;
+    color: $color-red;
+    margin: 0 12px 0 0;
+    padding: 8px 22px 8px 8px;
+    border-radius: 24px;
+    white-space: nowrap;
+    .tag-icon {
+      margin: -10px;
+      padding: 0;
+      position: relative;
+      content: url(./assets/icons/check.png);
+      background: none;
+      scale: 0.33;
+      height: 50px;
+    }
   }
 }

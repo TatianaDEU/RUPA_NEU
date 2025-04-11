@@ -56,6 +56,67 @@ function Main() {
           </h3>
         </div>
       </div>
+      <div className="service-block" draggeble="false">
+        <h1 style={{ fontSize: "52px" }}>LEISTUNGEN</h1>
+        <p style={{ fontSize: "27px" }}>
+          Wir bieten ein{" "}
+          <span style={{ color: "#a31b0f" }}>umfangreiches </span>
+          Leistungsspektrum:
+        </p>
+        <div style={{ display: "flex" }}>
+          <p className="tag">
+            <p className="tag-icon" />
+            Maurerarbeiten aller Art
+          </p>
+          <p className="tag">
+            <p className="tag-icon" />
+            Klinker Arbeiten
+          </p>
+          <p className="tag">
+            <p className="tag-icon" />
+            Fugenarbeiten
+          </p>
+          <p className="tag">
+            <p className="tag-icon" />
+            Vollwärmeschutz
+          </p>
+          <p className="tag">
+            <p className="tag-icon" />
+            Fliesen und Estricharbeiten
+          </p>
+          <p className="tag">
+            <p className="tag-icon" />
+            Trockenbauarbeiten
+          </p>
+        </div>
+        <div style={{ display: "flex", marginTop: "16px" }}>
+          <p className="tag">
+            <p className="tag-icon" />
+            Beton- und Stahlbetonarbeiten
+          </p>
+          <p className="tag">
+            <p className="tag-icon" />
+            Sanierungsarbeiten
+          </p>
+
+          <p className="tag">
+            <p className="tag-icon" />
+            Innen- und Außenputzarbeiten
+          </p>
+          <p className="tag">
+            <p className="tag-icon" />
+            Fliessestricharbeiten
+          </p>
+          <p className="tag">
+            <p className="tag-icon" />
+            Malerarbeiten
+          </p>
+        </div>
+        <p style={{ fontSize: "27px" }}>
+          Kontaktieren Sie uns, um Ihr nächstes Bauprojekt zu besprechen. <br />
+          Wir freuen uns darauf, Ihre Visionen Realität werden zu lassen!
+        </p>
+      </div>
     </div>
   );
 }
