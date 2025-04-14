@@ -70,7 +70,7 @@ function Main() {
           </p>
           <p className="tag">
             <p className="tag-icon" />
-            Klinker Arbeiten
+            Klinkerarbeiten
           </p>
           <p className="tag">
             <p className="tag-icon" />
@@ -79,10 +79,6 @@ function Main() {
           <p className="tag">
             <p className="tag-icon" />
             Vollwärmeschutz
-          </p>
-          <p className="tag">
-            <p className="tag-icon" />
-            Fliesen und Estricharbeiten
           </p>
           <p className="tag">
             <p className="tag-icon" />
@@ -105,17 +101,34 @@ function Main() {
           </p>
           <p className="tag">
             <p className="tag-icon" />
-            Fliessestricharbeiten
-          </p>
-          <p className="tag">
-            <p className="tag-icon" />
             Malerarbeiten
           </p>
         </div>
         <p style={{ fontSize: "27px" }}>
-          Kontaktieren Sie uns, um Ihr nächstes Bauprojekt zu besprechen. <br />
+          <span
+            style={{ color: "#a31b0f", cursor: "pointer" }}
+            onClick={handleOpenModal}
+          >
+            Kontaktieren
+          </span>{" "}
+          Sie uns, um Ihr nächstes Bauprojekt zu besprechen. <br />
           Wir freuen uns darauf, Ihre Visionen Realität werden zu lassen!
         </p>
+      </div>
+
+      <div className="portfolio-block">
+        <div className="first-block">
+          <h1 className="main-title">Referenzen</h1>
+          <div style={{position: "absolute", marginLeft: "-660px"}}>
+            <p className="gradient-part-one"></p>
+            <p className="title-border">Refe</p>
+          </div>
+          <div style={{position: "absolute", marginLeft: "620px"}}>
+            <p className="gradient-part-one"></p>
+            <p className="title-border">Renzen</p>
+          </div>
+          <img className="array-icon"></img>
+        </div>
       </div>
     </div>
   );

@@ -41,8 +41,8 @@ header a:hover {
 }
 
 .btn {
-  height: 55px;
-  width: 222px;
+  height: 45px;
+  width: 210px;
   border-radius: 55px;
   background: $color-red;
   border: none;
@@ -62,7 +62,7 @@ header a:hover {
 }
 
 .icon {
-  height: 55px;
+  height: 45px;
   cursor: pointer;
   transition: 0.3s;
   margin-right: 2%;
@@ -77,8 +77,8 @@ header a:hover {
 }
 
 .switch {
-  width: 135px;
-  height: 55px;
+  width: 120px;
+  height: 45px;
   border-radius: 55px;
   background-color: #eeebff;
   overflow: hidden;
@@ -86,8 +86,9 @@ header a:hover {
 
 .theme {
   margin: 2px;
-  width: 51px;
-  height: 51px;
+  top: -1px;
+  width: 45px;
+  height: 43px;
   border-radius: 55px;
   background-color: white;
   transition: 0.5s ease-in-out;
@@ -178,3 +179,6 @@ header a:hover {
     }
   }
 }
+
+
+/* --- Portfolio Block --- */
