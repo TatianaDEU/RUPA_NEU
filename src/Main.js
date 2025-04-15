@@ -119,15 +119,14 @@ function Main() {
       <div className="portfolio-block">
         <div className="first-block">
           <h1 className="main-title">Referenzen</h1>
-          <div style={{position: "absolute", marginLeft: "-660px"}}>
-            <p className="gradient-part-one"></p>
+          {/*<div style={{position: "absolute", marginLeft: "-660px"}}>
+            <p className="gradient-part-one"></p> 
             <p className="title-border">Refe</p>
-          </div>
+          </div> 
           <div style={{position: "absolute", marginLeft: "620px"}}>
-            <p className="gradient-part-one"></p>
+           < className="gradient-part-two">
             <p className="title-border">Renzen</p>
-          </div>
-          <img className="array-icon"></img>
+          </div>*/}
         </div>
       </div>
     </div>

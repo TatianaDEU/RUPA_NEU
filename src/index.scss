@@ -6,7 +6,7 @@ body {
   margin-right: 5%;
   margin-top: 0;
   margin-bottom: 0;
-  
+
   font-family: "Manrope", sans-serif;
   font-weight: 200;
   font-style: normal;
@@ -132,15 +132,28 @@ header a:hover {
     font-weight: 300;
   }
   .title {
-    background: linear-gradient(to right, #a31b0f, #a31b0f, #e26c0b, #eeebff, #b65404, #a31b0f, #a31b0f);
+    background: linear-gradient(
+      to right,
+      #a31b0f,
+      #a31b0f,
+      #e26c0b,
+      #eeebff,
+      #b65404,
+      #a31b0f,
+      #a31b0f
+    );
     background-clip: text;
     color: transparent;
     background-size: 200%;
     animation: gradientAnimation 4s linear infinite;
   }
   @keyframes gradientAnimation {
-    0% {background-position: 200% 50%;}
-    100% {background-position: 0% 50%;}
+    0% {
+      background-position: 200% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
   }
 
   .first-block {
@@ -180,5 +193,41 @@ header a:hover {
   }
 }
 
-
 /* --- Portfolio Block --- */
+
+.portfolio-block {
+  height: auto;
+  .first-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main-title {
+    font-size: 56px;
+    background: linear-gradient(to right, black, $color-red);
+    color: transparent;
+    background-clip: text;
+  }
+  .title-border {
+    font-size: 56px;
+    color: white;
+    margin: 10px 0;
+    text-shadow: -1px -1px 0 #ff362430, 1px -1px 0 #ff362430,
+      -1px 1px 0 #ff362430, 1px 1px 0 #ff362430;
+  }
+}
+
+.gradient-part-one {
+  position: absolute;
+  background: linear-gradient(to right, transparent, white);
+  color: transparent;
+  height: 70px;
+  width: 200px;
+}
+.gradient-part-two {
+  position: absolute;
+  background: linear-gradient(to left, transparent, white);
+  color: transparent;
+  height: 70px;
+  width: 200px;
+}
