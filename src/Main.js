@@ -1,8 +1,31 @@
 import { Children, useState } from "react";
 import ModalWindow from "./ModalWindow";
+import Alle from "./Portfolio/Alle";
+import Buerogebaude from "./Portfolio/Buerogebaude";
+import Bungalow from "./Portfolio/Bungalow";
+import Doppelhaus from "./Portfolio/Doppelhaus";
+import Einfamilienhaus from "./Portfolio/Einfamilienhaus";
 
 function Main() {
   const [showModal, setShowModal] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
+  const renderComponent = () => {
+    switch (selectedCategory) {
+      case "Alle":
+        return <Alle />;
+      case "Bürogebäude":
+        return <Buerogebaude />;
+      case "Bungalow":
+        return <Bungalow />;
+      case "Doppelhaus":
+        return <Doppelhaus />;
+      case "Einfamilienhaus":
+        return <Einfamilienhaus />;
+      default:
+        return <Alle />;
+    }
+  };
 
   const handleOpenModal = () => {
     setShowModal(true);
@@ -127,6 +150,48 @@ function Main() {
            < className="gradient-part-two">
             <p className="title-border">Renzen</p>
           </div>*/}
+        </div>
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            marginBottom: "20px",
+          }}
+        >
+          <p
+            className={`tag ${selectedCategory === "All" ? "selected" : ""}`}
+            onClick={() => setSelectedCategory("All")}
+          >
+            Alles
+          </p>
+          <p
+            className={`tag ${selectedCategory === "Bürogebäude" ? "selected" : ""}`}
+            onClick={() => setSelectedCategory("Bürogebäude")}
+          >
+            Bürogebäude
+          </p>
+          <p
+            className={`tag ${selectedCategory === "Bungalow" ? "selected" : ""}`}
+            onClick={() => setSelectedCategory("Bungalow")}
+          >
+            Bungalow
+          </p>
+          <p
+            className={`tag ${selectedCategory === "Doppelhaus" ? "selected" : ""}`}
+            onClick={() => setSelectedCategory("Doppelhaus")}
+          >
+            Doppelhaus
+          </p>
+          <p
+            className={`tag ${selectedCategory === "Einfamilienhaus" ? "selected" : ""}`}
+            onClick={() => setSelectedCategory("Einfamilienhaus")}
+          >
+            Einfamilienhaus
+          </p>
+        </div>
+
+        <div className="content" style={{marginLeft: "-5vw", marginRight: "-5vw"}}>
+          {renderComponent()}
         </div>
       </div>
     </div>

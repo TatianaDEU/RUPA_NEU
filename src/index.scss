@@ -1,5 +1,6 @@
 $color-black: #000;
 $color-red: #a31b0f;
+$color-hell-red: #fbedec;
 
 body {
   margin-left: 5%;
@@ -175,7 +176,7 @@ header a:hover {
     display: flex;
     font-size: 22px;
     font-weight: 500;
-    background: #fbedec;
+    background: $color-hell-red;
     color: $color-red;
     margin: 0 12px 0 0;
     padding: 8px 22px 8px 8px;
@@ -194,7 +195,20 @@ header a:hover {
 }
 
 /* --- Portfolio Block --- */
-
+.gradient-part-one {
+  position: absolute;
+  background: linear-gradient(to right, transparent, white);
+  color: transparent;
+  height: 70px;
+  width: 200px;
+}
+.gradient-part-two {
+  position: absolute;
+  background: linear-gradient(to left, transparent, white);
+  color: transparent;
+  height: 70px;
+  width: 200px;
+}
 .portfolio-block {
   height: auto;
   .first-block {
@@ -215,19 +229,28 @@ header a:hover {
     text-shadow: -1px -1px 0 #ff362430, 1px -1px 0 #ff362430,
       -1px 1px 0 #ff362430, 1px 1px 0 #ff362430;
   }
+  .tag {
+    display: flex;
+    font-size: 20px;
+    font-weight: 500;
+    background: $color-hell-red;
+    color: $color-red;
+    margin: 0 12px 0 0;
+    padding: 8px 22px 8px 22px;
+    border-radius: 24px;
+    border: 1px solid $color-hell-red;
+    cursor: pointer;
+    transition: 0.5s ease-in-out;
+    &:hover {
+      background: $color-red;
+      color: white;
+      filter: drop-shadow(0px 0px 0px #4824ff25)
+    }
+  }
+  .selected {
+    background: #04001a;
+    color: white;
+    border: 1px solid $color-red;
+  }
 }
 
-.gradient-part-one {
-  position: absolute;
-  background: linear-gradient(to right, transparent, white);
-  color: transparent;
-  height: 70px;
-  width: 200px;
-}
-.gradient-part-two {
-  position: absolute;
-  background: linear-gradient(to left, transparent, white);
-  color: transparent;
-  height: 70px;
-  width: 200px;
-}
