@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import "./Carousel.scss";
-import img1 from  "../assets/carousel/all/1.jpg";
+import img1 from "../assets/carousel/all/1.jpg";
 import img2 from "../assets/carousel/all/2.jpg";
 import img3 from "../assets/carousel/all/3.jpg";
 import img4 from "../assets/carousel/all/4.jpg";
@@ -8,9 +8,7 @@ import img5 from "../assets/carousel/all/5.jpg";
 import img6 from "../assets/carousel/all/6.jpg";
 import img7 from "../assets/carousel/all/7.jpg";
 import img8 from "../assets/carousel/all/8.jpg";
-
-const importAll = (r) => r.keys().map(r);
-
+import Buerogebaude from "./Buerogebaude";
 
 const images = [img1, img2, img3, img4, img5, img6, img7, img8];
 
@@ -52,7 +50,6 @@ const Carousel = ({ direction }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      
       <div className="carousel-content">
         {images.map((image, index) => (
           <img
@@ -87,6 +84,7 @@ const Carousel = ({ direction }) => {
         </div>
       )}
     </div>
+   
   );
 };
 

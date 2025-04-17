@@ -14,7 +14,7 @@ function Main() {
     switch (selectedCategory) {
       case "Alle":
         return <Alle />;
-      case "Bürogebäude":
+      case "Buerogebaude":
         return <Buerogebaude />;
       case "Bungalow":
         return <Bungalow />;
@@ -170,9 +170,9 @@ function Main() {
           </p>
           <p
             className={`tag ${
-              selectedCategory === "Bürogebäude" ? "selected" : ""
+              selectedCategory === "Buerogebaude" ? "selected" : ""
             }`}
-            onClick={() => setSelectedCategory("Bürogebäude")}
+            onClick={() => setSelectedCategory("Buerogebaude")}
           >
             Bürogebäude
           </p>

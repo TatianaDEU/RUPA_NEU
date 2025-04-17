@@ -1,11 +1,55 @@
-import React from "react";
+import React, { useState } from "react";
+import "./Buerogebaude.scss";
+import img1 from "../assets/carousel/all/4.jpg";
+import img2 from "../assets/carousel/all/5.jpg";
+import img3 from "../assets/carousel/all/6.jpg";
+
+const images = [img1, img2, img3];
 
 const Bungalow = () => {
+  const [visibleRows, setVisibleRows] = useState(2);
+  const [selectedImage, setSelectedImage] = useState(null);
+  const imagesPerRow = 4;
+
+  const closeModal = () => {
+    setSelectedImage(null);
+  };
+
+  const showMoreImages = () => {
+    setVisibleRows(visibleRows + 2);
+  };
+
+  const renderImages = () => {
+    const visibleImages = images.slice(0, visibleRows * imagesPerRow);
+    return visibleImages.map((image, index) => (
+      <img
+        key={index}
+        src={image}
+        alt=""
+        className="gallery-image"
+        onClick={() => setSelectedImage(image)}
+      />
+    ));
+  };
+
   return (
-    <div>
-      <p style={{ fontSize: "60px" }}>Bungalow</p>
+    <div className="image-gallery" style={{ padding: "0 0 30px 0" }}>
+      <div className="image-grid">{renderImages()}</div>
+      {visibleRows * imagesPerRow < images.length && (
+        <button className="show-more-button" onClick={showMoreImages}>
+          Mehr<p className="more-icon"></p>
+        </button>
+      )}
+      {selectedImage && (
+        <div className="modal-window-image" onClick={closeModal}>
+          <div style={{ display: "flex" }} onClick={(e) => e.stopPropagation()}>
+            <img src={selectedImage} alt="" className="modal-image" />
+            <p><button onClick={closeModal} className="modal-image-close-button"></button></p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
 
-export default Bungalow; 
+export default Bungalow;

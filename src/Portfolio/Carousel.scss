@@ -53,7 +53,7 @@
     outline: none;
     transition: 0.5s ease-in-out;
     &:hover {
-        filter: drop-shadow(0px 0px 0px #ff502475);
+        filter: drop-shadow(0px 0px 0px #a31b0f75);
         background: white;
     }
     &::before, &::after {
@@ -63,7 +63,7 @@
         left: 50%;
         width: 30px;
         height: 4px;
-        background-color: #ff5024;
+        background-color: #a31b0f;
     }
     &::before {
         transform: translate(-50%, -50%) rotate(45deg);
