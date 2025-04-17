@@ -55,7 +55,11 @@ function Main() {
           </p>
         </ModalWindow>
 
-        <a href="/" target="_blank" className="icon instagram"></a>
+        <a
+          href="https://www.instagram.com/rupa.bauprojekt?igsh=MWp5aTM2bzBrdnVyMg=="
+          target="_blank"
+          className="icon instagram"
+        ></a>
         <a href="/" target="_blank" className="icon email"></a>
 
         <div className="switch">
@@ -165,35 +169,47 @@ function Main() {
             Alles
           </p>
           <p
-            className={`tag ${selectedCategory === "Bürogebäude" ? "selected" : ""}`}
+            className={`tag ${
+              selectedCategory === "Bürogebäude" ? "selected" : ""
+            }`}
             onClick={() => setSelectedCategory("Bürogebäude")}
           >
             Bürogebäude
           </p>
           <p
-            className={`tag ${selectedCategory === "Bungalow" ? "selected" : ""}`}
+            className={`tag ${
+              selectedCategory === "Bungalow" ? "selected" : ""
+            }`}
             onClick={() => setSelectedCategory("Bungalow")}
           >
             Bungalow
           </p>
           <p
-            className={`tag ${selectedCategory === "Doppelhaus" ? "selected" : ""}`}
+            className={`tag ${
+              selectedCategory === "Doppelhaus" ? "selected" : ""
+            }`}
             onClick={() => setSelectedCategory("Doppelhaus")}
           >
             Doppelhaus
           </p>
           <p
-            className={`tag ${selectedCategory === "Einfamilienhaus" ? "selected" : ""}`}
+            className={`tag ${
+              selectedCategory === "Einfamilienhaus" ? "selected" : ""
+            }`}
             onClick={() => setSelectedCategory("Einfamilienhaus")}
           >
             Einfamilienhaus
           </p>
         </div>
 
-        <div className="content" style={{marginLeft: "-5vw", marginRight: "-5vw"}}>
+        <div
+          className="content"
+          style={{ marginLeft: "-5vw", marginRight: "-5vw" }}
+        >
           {renderComponent()}
         </div>
       </div>
+
     </div>
   );
 }

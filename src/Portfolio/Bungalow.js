@@ -8,4 +8,4 @@ const Bungalow = () => {
   );
 };
 
-export default Bungalow;
+export default Bungalow; 

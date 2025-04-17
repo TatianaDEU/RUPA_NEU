@@ -1,9 +1,11 @@
 import React from "react";
+import Carousel from "./Carousel";
 
 const Alle = () => {
   return (
     <div>
-      <p style={{ fontSize: "60px" }}>Alle</p>
+      <Carousel direction="left"/>
+      <Carousel direction="right"/>
     </div>
   );
 };
