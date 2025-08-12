@@ -2,6 +2,18 @@ $color-black: #000;
 $color-red: #a31b0f;
 $color-hell-red: #fbedec;
 
+*::-webkit-scrollbar {
+  width: 4px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: $color-red;
+}
+
+*::-webkit-scrollbar-track {
+  background-color: #ffffff01;
+}
+
 body {
   margin-left: 5%;
   margin-right: 5%;
@@ -18,14 +30,36 @@ body {
 /* --- HEADER --- */
 
 header {
+  margin-left: -5vw;
+  margin-right: -5vw;
+  position: fixed;
+  width: 90vw;
+  padding: 0 5vw 0 5vw;
+  background: #ffffffe1;
+  backdrop-filter: blur(8px);
+  z-index: 1000px;
+}
+
+.navigation {
   display: flex;
-  height: 100px;
-  place-items: center;
+  justify-content: space-between;
+  align-items: center;
+  height: 13vh;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 20px;
+}
+
+.header-buttons-mobile {
+  display: flex;
+  gap: 5vw;
 }
 
 .menu {
   height: 100px;
-  width: 100%;
+  width: 50vw;
   align-content: center;
 }
 
@@ -42,8 +76,9 @@ header a:hover {
 }
 
 .btn {
+  position: relative;
   height: 45px;
-  width: 210px;
+  width: 165px;
   border-radius: 55px;
   background: $color-red;
   border: none;
@@ -66,7 +101,21 @@ header a:hover {
   height: 45px;
   cursor: pointer;
   transition: 0.3s;
-  margin-right: 2%;
+}
+
+.icon-mobile {
+  margin-right: 0;
+  height: 13.5vw;
+  width: 13.5vw;
+}
+
+.icon-menu {
+  border-radius: 50%;
+  background-color: var(--switch-background);
+  border: 1px solid var(--main-elements-color);
+  cursor: pointer;
+  height: 13.45vw;
+  width: 13.45vw;
 }
 
 .icon.instagram {
@@ -77,12 +126,19 @@ header a:hover {
   content: url(./assets/icons/email.svg);
 }
 
+.icon-menu {
+   content: url(./assets/icons/icon-menu.svg);
+}
+
 .switch {
-  width: 120px;
+  width: 100px;
   height: 45px;
   border-radius: 55px;
   background-color: #eeebff;
   overflow: hidden;
+}
+.switch:hover > .theme.light {
+  transform: rotate(45deg);
 }
 
 .theme {
@@ -110,15 +166,11 @@ header a:hover {
   margin-left: -7.5px;
 }
 
-.switch:hover > .theme.light {
-  transform: rotate(45deg);
-}
-
 /* --- Welcome block --- */
 
 .welcome-block {
   background-color: white;
-  height: 650px;
+  height: 800px;
   display: flex;
   place-items: center;
   h1 {
@@ -160,6 +212,14 @@ header a:hover {
   .first-block {
     align-content: center;
     width: 55%;
+  }
+  .main-image-box {
+    width: 45%;
+    margin-top: -2%;
+    .image {
+      max-height: 400px;
+      border-radius: 15px;
+    }
   }
 }
 
@@ -244,7 +304,7 @@ header a:hover {
     &:hover {
       background: $color-red;
       color: white;
-      filter: drop-shadow(0px 0px 0px #4824ff25)
+      filter: drop-shadow(0px 0px 0px #4824ff25);
     }
   }
   .selected {
@@ -254,3 +314,53 @@ header a:hover {
   }
 }
 
+/* --- Footer --- */
+
+.footer {
+  height: 80px;
+  text-align: center;
+  font-size: 14px;
+  border-top: 1px solid #eae5ff;
+  margin-left: -5vw;
+  margin-right: -5vw;
+  align-content: center;
+}
+
+/* --- Button To Up --- */
+
+.btn-up {
+  width: 100px;
+  height: 70px;
+  position: fixed;
+  right: 5vw;
+  bottom: 6vw;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s linear;
+  animation: appearance 2s forwards;
+  border: none;
+  opacity: 0;
+  transform: translateY(0);
+  background: transparent;
+  z-index: 1000;
+  &::before {
+    content: "";
+    width: 100px;
+    height: 70px;
+    background-size: 100% 100%;
+    background-image: url(../src/assets/icons/more_icon.png);
+  }
+}
+
+@keyframes appearance {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
